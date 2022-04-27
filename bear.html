@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+
+    .face {
+      background-color: black;
+      width: 500px;
+      height: 500px;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+    }
+
+    .face::before {
+      content: "";
+      background-color: white;
+      width: 65px;
+      height: 70px;
+      right: 261px;
+      bottom: 40px;
+      transform: skew(51deg);
+      position: absolute;
+    }
+
+    .face::after {
+      content: "";
+      background-color: white;
+      width: 65px;
+      height: 70px;
+      left: 261px;
+      bottom: 40px;
+      transform: skew(-51deg);
+      position: absolute;
+    }
+
+
+    .oval {
+      background-color: rgb(255, 255, 255);
+      width: 43%;
+      height: calc(30% - 1px);
+      border-radius: 49%;
+      position: relative;
+      left: 50%;
+      top: 53%;
+      transform: translate(-50%, -52%);
+    }
+
+    .oval::before {
+      content: "";
+      background-color: rgb(0, 0, 0);
+      width: 55px;
+      height: 37px;
+      left: 50%;
+      top: 13px;
+      transform: translate(-50%, 0%);
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    .oval::after {
+      content: "";
+      background-color: black;
+      width: 130px;
+      height: 47px;
+      left: 50%;
+      bottom: 26px;
+      transform: translate(-50%, 0%);
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    .red-left {
+      background-color: red;
+      width: 125px;
+      height: 125px;
+      position: absolute;
+      left: -24px;
+      top: 50%;
+      transform: translate(0%, -50%);
+      border-radius: 50%;
+    }
+
+    .red-left:before {
+      content: "";
+      background-color: black;
+      border: 17px solid white;
+      width: 66px;
+      height: 66px;
+      position: absolute;
+      right: -97px;
+      top: -90px;
+      border-radius: 50%;
+    }
+
+    .red-left::after {
+      content: "";
+      background-color: white;
+      border: 17px solid black;
+      width: 55px;
+      height: 55px;
+      position: absolute;
+      right: -45px;
+      top: -195px;
+      border-radius: 50%;
+    }
+
+    .red-right {
+      background-color: red;
+      width: 125px;
+      height: 125px;
+      position: absolute;
+      right: -24px;
+      top: 50%;
+      transform: translate(0%, -50%);
+      border-radius: 50%;
+    }
+
+    .red-right:before {
+      content: "";
+      background-color: black;
+      border: 17px solid white;
+      width: 66px;
+      height: 66px;
+      position: absolute;
+      left: -97px;
+      top: -90px;
+      border-radius: 50%;
+    }
+
+    .red-right::after {
+      content: "";
+      background-color: white;
+      border: 17px solid black;
+      width: 55px;
+      height: 55px;
+      position: absolute;
+      left: -45px;
+      top: -195px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="face">
+    <div class="oval"></div>
+    <div class="red-left"></div>
+    <div class="red-right"></div>
+
+  </div>
+
+</body>
+
+</html>

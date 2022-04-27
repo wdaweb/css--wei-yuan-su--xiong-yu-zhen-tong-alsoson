@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    * {
+      color: gray;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .one {
+      width: 750px;
+      height: 100px;
+      background: linear-gradient(180deg, white, lightgray, lightgray, white);
+      border: 1px solid gray;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      position: absolute;
+      /* text-align: center; */
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+    }
+
+    .one::before {
+      content: '';
+      width: 50px;
+      height: 150px;
+      background: linear-gradient(180deg, white, lightgray, lightgray, white);
+      border: 1px solid gray;
+      border-radius: 10px;
+      position: absolute;
+      left: -50px;
+      top: -25px;
+      z-index: 1;
+    }
+
+    .one::after {
+      content: '';
+      width: 100px;
+      height: 0px;
+      background-color: gary;
+      border: 1px solid gray;
+      right: -103px;
+      top: 50%;
+      position: absolute;
+    }
+
+    .two:before {
+      content: "";
+      width: 75px;
+      height: 150px;
+      background: black;
+      position: absolute;
+      color: black;
+      left: 50%;
+      transform: translate(-50%, 0);
+      z-index: 1;
+    }
+
+    .two {
+      border: 1px solid gray;
+      width: 600px;
+      height: 150px;
+      background:
+        linear-gradient(to right, transparent 0%, transparent 45%, black 45%, black 55%, rgba(252, 252, 113, 0.5) 55%, rgba(252, 252, 113, 0.5) 100%),
+        linear-gradient(to bottom, white 0%, lightgray 30%, lightgray 70%, white 100%);
+      /* background: rgb(0,0, 5, 0.2) linear-gradient(to right
+      ,transparent 0%, transparent 5%, gray 6%, transparent 7%, transparent 13%,gray 61%, gray 80%, transparent 81%, transparent 100%);
+      border: 1px solid gray; */
+      position: relative;
+      left: 75px;
+      top: -25px;
+      line-height: 280px;
+    }
+
+    .two::after {
+      content: "";
+      width: 600px;
+      height: 20px;
+      background: repeating-linear-gradient(90deg, transparent 0, transparent 3%, gray 3%, gray 3.2%);
+      position: absolute;
+      right: 0;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="one">
+    <div class="two">Made in Taiwan</div>
+  </div>
+</body>
+
+</html>
